@@ -1,26 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/App.css";
 const App = () => {
-  const [inputValue, setInputValue] = useState("");
-  const [nameToDisplay, setNameToDisplay] = useState("");
-
-  const handleButtonClick = () => {
-    setNameToDisplay(inputValue);
+  const [name, setName] = useState("_____");
+  const [input, setInput] = useState("");
+  const onButtonClick = (e) => {
+    setName(input);
   };
-
-  //code here
+  const onInputChange = (e) => {
+    setInput(e.target.value);
+  };
   return (
     <div id="main">
-      <input
-        id="input"
-        onChange={(event) => setInputValue(event.target.value)}
-      ></input>
-      <button id="button" onClick={handleButtonClick}>
+      <input id="input" onChange={onInputChange}></input>
+      <button id="button" onClick={onButtonClick}>
         Click
       </button>
-      <p id="text">
-        Hello my name is {nameToDisplay} and I study at Newton School
-      </p>
+      <p id="text"> Hello my name is {name} and I study at Newton School</p>
     </div>
   );
 };
