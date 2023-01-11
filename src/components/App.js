@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/App.css";
 const App = () => {
   const [inputValue, setInputValue] = useState("");
-  const [nameToDisplay, setNameToDisplay] = useState("");
+  const [nameToDisplay, setNameToDisplay] = useState("____");
 
   const handleButtonClick = () => {
     setNameToDisplay(inputValue);
@@ -20,8 +20,7 @@ const App = () => {
         Click
       </button>
       <p id="text">
-        Hello my name is {nameToDisplay === "" ? "____" : nameToDisplay} and I
-        study at Newton School
+        Hello my name is {nameToDisplay} and I study at Newton School
       </p>
     </div>
   );
