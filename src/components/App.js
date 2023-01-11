@@ -13,7 +13,6 @@ const App = () => {
     <div id="main">
       <input
         id="input"
-        value={inputValue}
         onChange={(event) => setInputValue(event.target.value)}
       ></input>
       <button id="button" onClick={handleButtonClick}>
