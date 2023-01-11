@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/App.css";
 const App = () => {
   const [inputValue, setInputValue] = useState("");
-  const [nameToDisplay, setNameToDisplay] = useState("____");
+  const [nameToDisplay, setNameToDisplay] = useState("");
 
   const handleButtonClick = () => {
     setNameToDisplay(inputValue);
